@@ -1,16 +1,21 @@
+"use client";
+import Link from 'next/link';
+import Image from "next/image";
+
 export default function Page() {
   return (
-    <div className="flex justify-between items-center h-[800px] w-full">
-      {/* Linker Container */}
-      <div className="w-1/2 h-full flex items-center justify-start">
-        <h1 className="font-bricolage font-light text-6xl leading-tight">
-          content management
-        </h1>
+    <div className='container h-[800px] flex space-x-[25px]'>
+      <div className='flex flex-1 items-center'>
+        <h1 className='font-bricolage text-dunkel text-4xl'>Content Management</h1>
       </div>
-
-      {/* Rechter Container mit grauem Hintergrund */}
-      <div className="w-1/2 h-full bg-grau flex items-center justify-start">
-        {/* Kein Inhalt hier */}
+      <div className='flex flex-1 items-center justify-center bg-grey'>
+      <Image
+              src="/logo-sk-online-marketing.svg"
+              alt="SK Online Marketing Logo"
+              width={137} 
+              height={44}              
+              className="cursor-pointer transition-transform duration-300"
+            />
       </div>
     </div>
   );

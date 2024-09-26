@@ -33,7 +33,10 @@ export default function RootLayout({ children }) {
         <main className="max-w-screen-2xl mx-auto">
           {children}
         </main>
-        <Footer />
+        {/* Anpassen des Footers, um die gleiche Breite wie der Inhalt zu haben */}
+        <footer className="max-w-screen-2xl mx-auto">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
