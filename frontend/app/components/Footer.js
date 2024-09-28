@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
 
             {/* Zweiter Navigationscontainer */}
-            <div className="w-1/2 mb-4">
+            <div className="w-1/2 mb-4 pl-4">
               <p className="font-inter font-bold leading-normal text-dunkel mb-0">SK Online Marketing</p>
               <Link href="/agentur" className="block font-inter font-light leading-normal hover:text-blue text-dunkel">Über uns</Link>
               <Link href="/referenzen" className="block font-inter font-light leading-normal hover:text-blue text-dunkel">Referenzen</Link>
