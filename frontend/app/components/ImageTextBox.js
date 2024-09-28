@@ -69,12 +69,12 @@ export default function ImageTextBox({
     >
       {/* Text Container */}
       <div
-        className={`w-full md:w-1/2 h-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-40 ${textBgColor}`}
+        className={`w-full md:w-1/2 h-full flex flex-col justify-center items-start p-10 md:p-10 lg:p-20 xl:p-40 ${textBgColor}`}
       >
         <h2 className="font-bricolage text-4xl md:text-5xl font-light leading-none mb-6 text-dunkel">
           {title}
         </h2>
-        <p className="font-inter text-base md:text-lg font-light leading-relaxed mb-6 text-dunkel">
+        <p className="font-inter text-xl md:text-lg font-light leading-relaxed mb-6 text-dunkel">
           {text}
         </p>
         <Link href={link} legacyBehavior>

@@ -2,20 +2,20 @@ import Link from 'next/link';
 
 export default function CTABox({ title, text, buttonText, bgColor }) {
   return (
-    <div className={`flex flex-col justify-center items-center py-12 px-3 md:px-60 text-center ${bgColor}`}>
+    <div className={`flex flex-col justify-center items-center py-12 px-12 sm:px-12 md:px-12 lg:px-60 xl:px-80 2xl:px-80 text-center ${bgColor}`}>
       {/* Titel */}
-      <h2 className="font-bricolage font-medium text-[1.5rem] md:text-[2.5rem] leading-[0.9] md:leading-[0.9] mb-4 text-dunkel">
+      <h2 className="font-bricolage font-light text-4xl lg:text-5xl mb-4 text-dunkel">
         {title}
       </h2>
 
       {/* Text */}
-      <p className="text-xl mb-8 text-green">
+      <p className="font-inter text-xl mb-8 font-light text-dunkel">
         {text}
       </p>
 
       {/* Button */}
       <Link href="/kontakt" legacyBehavior>
-        <a className="inline-block px-6 md:px-8 py-2 bg-dunkel text-grey rounded-md hover:bg-transparent hover:text-dunkel border border-dunkel transition-all max-w-max">
+        <a className="inline-block px-6 py-3 bg-transparent text-dunkel rounded-md hover:bg-dunkel hover:text-lightblue border border-dunkel transition-colors">
           {buttonText}
         </a>
       </Link>

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-wrap justify-between items-end h-full">
         
         {/* Linker Hauptcontainer */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-between h-full">
+        <div className="w-full lg:w-1/2 flex flex-col justify-between h-full pr-3">
           <div className="flex flex-wrap">
             
             {/* Erster Navigationscontainer */}

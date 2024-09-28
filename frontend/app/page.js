@@ -12,13 +12,13 @@ export default function Home() {
     <div>
 
       {/* Hero mit Bild */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto md:h-[800px] max-w-screen-2xl mx-auto px-4 mt-8 md:mt-0 space-y-8 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-center h-auto md:h-[800px] max-w-screen-2xl mx-auto px-4 mt-8 sm:mt-0 md:mt-0 space-y-8 md:space-y-0">
 
-        <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0 order-1 md:order-2">
+        <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-2 order-1 md:order-2 p-6">
           <AnimatedTitle />
         </div>
         <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
-          <h1 className="font-bricolage font-medium text-[3rem] text-dunkel md:text-[4.5rem] leading-[1.1] md:leading-[0.9]">
+          <h1 className="font-bricolage font-medium text-[2.5rem] text-dunkel md:text-[4.5rem] leading-[1.1] md:leading-[0.9]">
             Zeitgerechtes Webdesign und Digital Marketing
           </h1>
           <p className="font-inter font-light text-dunkel text-base md:text-2xl leading-relaxed">
@@ -77,7 +77,7 @@ export default function Home() {
       />
 
       {/* BigBox Theaser */}
-  
+
 
       {/* CTA Box */}
       <CTABox
