@@ -14,10 +14,10 @@ export default function Home() {
       {/* Hero mit Bild */}
       <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-4 space-y-8 mt-6">
 
-        <div className="w-full md:w-1/2 flex justify-center h-auto items-center order-2 md:order-2 px-8 mt-5">
+        <div className="w-full md:w-1/2 flex justify-center h-auto items-center order-1 md:order-2 px-8 mt-5">
           <AnimatedTitle />
         </div>
-        <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-1 md:order-1">
+        <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
           <h1 className="font-bricolage font-medium text-[2.5rem] text-dunkel md:text-[3.5rem] xl:text-[4.5rem]  leading-[1.1] md:leading-[0.9]">
             Zeitgerechtes Webdesign und Digital Marketing
           </h1>
