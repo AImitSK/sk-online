@@ -12,9 +12,9 @@ export default function Home() {
     <div>
 
       {/* Hero mit Bild */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto md:h-[800px] max-w-screen-2xl mx-auto px-4 mt-8 sm:mt-0 md:mt-0 space-y-8 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-4 space-y-8 mt-6">
 
-        <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-2 order-1 md:order-2 p-6">
+        <div className="w-full md:w-1/2 flex justify-center h-auto items-center order-1 md:order-2 px-8">
           <AnimatedTitle />
         </div>
         <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">

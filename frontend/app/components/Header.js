@@ -33,7 +33,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`bg-grey p-4 ${isSticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg' : ''}`}>
+    <header className={`bg-grey py-4 px-0 ${isSticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg' : ''}`}>
       <div className="max-w-screen-2xl w-full mx-auto flex justify-between items-center px-6">
         {/* Logo */}
         <div className="flex items-center">
