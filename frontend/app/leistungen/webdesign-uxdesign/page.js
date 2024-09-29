@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import SimpleSlider from "@/app/components/Logoslider";
+import CTABox from "@/app/components/CTABox";
 
 export default function Page() {
   return (
@@ -67,6 +69,57 @@ export default function Page() {
       </div>
 
 
+      {/* Text mit Bild */}
+      <div className="flex justify-center w-5/6 gap-8 mx-auto mb-32 mt-44">
+        <div className="flex flex-col w-1/2">
+          <h2 className="font-bricolage font-light text-3xl lg:text-5xl mb-4 text-dunkel">
+            Webdesign, das Ideen in Erfolge verwandelt
+          </h2>
+          <p>Ihr Webdesign sollte mehr leisten als gut auszusehen. Es sollte Besucher in Kunden verwandeln, Ihre Marke stärken und messbare Ergebnisse liefern. Wir gestalten digitale Erlebnisse, die Ihr Wachstum fördern.</p>
+          <ul className="list-disc list-inside text-lg pl-6 space-y-2 text-dunkel mt-4">
+            <li className="marker:text-blue">Schnelle Ladezeiten</li>
+            <li className="marker:text-blue">Aussagekräftige Inhalte</li>
+            <li className="marker:text-blue">SEO-optimiert</li>
+            <li className="marker:text-blue">Conversion-optimiert</li>
+            <li className="marker:text-blue">Attraktives Layout</li>
+            <li className="marker:text-blue">Responsives Design</li>
+          </ul>
+
+
+
+
+        </div>
+        <div className="flex flex-col w-1/2">
+          <Image
+            src="/ux.png"
+            alt="Prototype"
+            width={700}
+            height={425}
+            className="cursor-pointer transition-transform duration-300"
+          />
+        </div>
+      </div>
+
+
+
+      {/* Logo Slider */}
+      <div className="w-full -mt-6 -mb-8 flex justify-center items-center">
+        <div className="max-w-screen-2xl w-full lg:px-12 px-0 flex justify-center">
+          <SimpleSlider />
+        </div>
+      </div>
+
+      {/* CTA Box */}
+      <div>
+        <CTABox
+          title="Wir transformieren Daten in greifbaren digitalen Erfolg."
+          text="Klingt wie digitale Alchemie? Wir zeigen Ihnen, wie wir aus Daten, Insights oder kreativem UX-Design wahre digitale Goldstücke „transmutieren“."
+          buttonText="Kontakt aufnehmen"
+          bgColor="bg-lightblue"
+          buttonColor="#005FAB"
+          buttonTextColor="#ffffff"
+        />
+      </div>
 
 
     </div>

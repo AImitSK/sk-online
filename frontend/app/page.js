@@ -94,6 +94,8 @@ export default function Home() {
         text="Klingt wie digitale Alchemie? Wir zeigen Ihnen, wie wir aus Daten, Insights oder kreativem UX-Design wahre digitale Goldstücke „transmutieren“."
         buttonText="Kontakt aufnehmen"
         bgColor="bg-lightgreen"
+        buttonColor="#D7FF9C"
+        buttonTextColor="#44474C"
       />
 
     </div>
