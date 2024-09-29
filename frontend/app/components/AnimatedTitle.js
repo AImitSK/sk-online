@@ -18,11 +18,10 @@ const pathVariants = {
 export default function AnimatedTitle() {
   return (
     <svg
-      width="450"
-      height="450"
       viewBox="0 0 450 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-auto" // Dynamische Größensteuerung
     >
       {/* Pfad 1: Großer Kreis unten rechts (Hellblau) */}
       <motion.path

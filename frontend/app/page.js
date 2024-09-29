@@ -12,12 +12,16 @@ export default function Home() {
     <div>
 
 
+
+
 {/* Hero mit Bild */}
 <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6">
 
   <div className="w-full md:w-1/2 flex justify-center h-auto lg:h-full items-center order-1 md:order-2 px-8 mt-5">
-    {/* Hier SVG dynamisch laden */}
-    <img src="/titel.svg" className="w-full h-auto max-w-[450px]" alt="Your SVG" />
+    {/* Hier das animierte SVG mit begrenzter Größe */}
+    <div className="w-full h-auto max-w-[450px]">
+      <AnimatedTitle />
+    </div>
   </div>
   
   <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
@@ -36,7 +40,6 @@ export default function Home() {
     </div>
   </div>
 </div>
-
 
 
 
