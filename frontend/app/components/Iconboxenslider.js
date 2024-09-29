@@ -8,17 +8,41 @@ import Link from 'next/link';
 export default function IconBoxSlider() {
     const sliderRef = useRef(null); // Slider-Referenz erstellen
 
+    const NextArrow = ({ onClick }) => {
+        return (
+            <div
+                className="absolute top-1/2 2xl:-right-5 right-0  transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300"
+                onClick={onClick}
+            >
+                ›
+            </div>
+        );
+    };
+    
+    const PrevArrow = ({ onClick }) => {
+        return (
+            <div
+                className="absolute top-1/2 2xl:-left-5 left-0 transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300"
+                onClick={onClick}
+            >
+                ‹
+            </div>
+        );
+    };
+    
+
     var settings = {
         dots: true,
-        infinite: false, // Infinite Loop deaktivieren, um Duplikate zu vermeiden
+        infinite: false,
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 2000,
         pauseOnHover: false,
-        centerPadding: '40px', // Definiert den Abstand zwischen den Kacheln
-        arrows: false, // Standardpfeile deaktivieren, um eigene zu verwenden
+        centerPadding: '0px', // Kein Padding an den Rändern
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
@@ -45,36 +69,35 @@ export default function IconBoxSlider() {
     };
 
     return (
-        <div className="w-full flex justify-center mb-11">
-            <div className="w-full max-w-screen-2xl px-6"> {/* Max-width gesetzt und Padding hinzugefügt */}
-                <Slider
-                    {...settings}
-                    ref={sliderRef}
-                    className="flex justify-center"
-                >
+        <div className="w-full flex justify-center mb-11 gap-12 relative">
+            <div className="w-full max-w-screen-2xl relative"> {/* Max-width gesetzt und Padding hinzugefügt */}
+                <Slider {...settings} ref={sliderRef} className="flex"> {/* Verwende gap für den Abstand */ }
 
                     {/* Slide 1 */}
-                    <div className="px-4">
-                        <a href="/leistungen/webdesign-uxdesign" className="m-2 group block w-full rounded-lg p-6 bg-white ring-1 ring-dunkel/5 space-y-3 hover:bg-darkblue hover:ring-blue">
-                            <div className="items-center mb-3">
-                                <Image
-                                    src="/mini-icon/icon-01.png"
-                                    alt="Logo Baeumer"
-                                    width={30}
-                                    height={30}
-                                />
+                    <div className="px-7">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-inter font-normal text-2xl leading-6">
+                                    Webdesign<br />UX-Design
+                                </h3>
+                                <div className="w-8 h-8 flex items-center justify-center">
+                                    <Image
+                                        src="/mini-icon/icon-01.png"
+                                        alt="Icon"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="font-inter font-semibold text-lg leading-5 group-hover:text-white">
-                                Webdesign / UX-Design
-                            </h3>
-                            <hr />
-                            <p className="font-inter text-sm text-dunkel group-hover:text-white">
+
+                            <p className="font-inter text-sm text-dunkel">
                                 Modernes Webdesign und intuitive UX für unvergessliche Nutzererlebnisse perfekt umgesetzt.
                             </p>
+
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-2 py-0.5 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-xs">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
                                             {item}
                                         </li>
                                     ))}
@@ -83,28 +106,31 @@ export default function IconBoxSlider() {
                         </a>
                     </div>
 
-                    {/* Slide 2 */}
-                    <div className="px-4">
-                        <a href="/leistungen/webdesign-uxdesign" className="m-2 group block w-full rounded-lg p-6 bg-white ring-1 ring-dunkel/5 space-y-3 hover:bg-darkblue hover:ring-blue">
-                            <div className="items-center mb-3">
-                                <Image
-                                    src="/mini-icon/icon-02.png"
-                                    alt="Logo Baeumer"
-                                    width={30}
-                                    height={30}
-                                />
+                    {/* Weitere Slides */}
+                    <div className="px-7">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-inter font-normal text-2xl leading-6">
+                                    Digital<br />Marketing
+                                </h3>
+                                <div className="w-8 h-8 flex items-center justify-center">
+                                    <Image
+                                        src="/mini-icon/icon-02.png"
+                                        alt="Logo Baeumer"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="font-inter font-semibold text-lg leading-5 group-hover:text-white">
-                                Digital Marketing
-                            </h3>
-                            <hr />
-                            <p className="font-inter text-sm text-dunkel group-hover:text-white">
+
+                            <p className="font-inter text-sm text-dunkel">
                                 Wir entwickeln Strategien, die Ihre Marke in den Mittelpunkt rücken und sichtbare Ergebnisse erzielen.
                             </p>
+
                             <div className="flex">
                                 <ul className="flex flex-wrap">
-                                    {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-2 py-0.5 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-xs">
+                                    {['SEO', 'Content', 'Social Media', 'PPC', 'Analytics', 'Marketing'].map((item, index) => (
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
                                             {item}
                                         </li>
                                     ))}
@@ -113,28 +139,31 @@ export default function IconBoxSlider() {
                         </a>
                     </div>
 
-                    {/* Slide 3 */}
-                    <div className="px-4">
-                        <a href="/leistungen/webdesign-uxdesign" className="m-2 group block w-full rounded-lg p-6 bg-white ring-1 ring-dunkel/5 space-y-3 hover:bg-darkblue hover:ring-blue">
-                            <div className="items-center mb-3">
-                                <Image
-                                    src="/mini-icon/icon-03.png"
-                                    alt="Logo Baeumer"
-                                    width={30}
-                                    height={30}
-                                />
+                    {/* Weitere Slides */}
+                    <div className="px-7">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-inter font-normal text-2xl leading-6">
+                                    Werbefotografie<br />Werbefilm
+                                </h3>
+                                <div className="w-8 h-8 flex items-center justify-center">
+                                    <Image
+                                        src="/mini-icon/icon-03.png"
+                                        alt="Logo Baeumer"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="font-inter font-semibold text-lg leading-5 group-hover:text-white">
-                                Werbefotografie
-                            </h3>
-                            <hr />
-                            <p className="font-inter text-sm text-dunkel group-hover:text-white">
+
+                            <p className="font-inter text-sm text-dunkel">
                                 Wir verleihen Ihrer Werbung Flügel mit Fotos und Filmaufnahmen, die begeistern.
                             </p>
+
                             <div className="flex">
                                 <ul className="flex flex-wrap">
-                                    {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-2 py-0.5 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-xs">
+                                    {['Fotografie', 'Werbefilm', 'Bildbearbeitung', 'Produktfotografie', 'Shooting'].map((item, index) => (
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
                                             {item}
                                         </li>
                                     ))}
@@ -143,28 +172,31 @@ export default function IconBoxSlider() {
                         </a>
                     </div>
 
-                    {/* Slide 4 */}
-                    <div className="px-4">
-                        <a href="/leistungen/webdesign-uxdesign" className="m-2 group block w-full rounded-lg p-6 bg-white ring-1 ring-dunkel/5 space-y-3 hover:bg-darkblue hover:ring-blue">
-                            <div className="items-center mb-3">
-                                <Image
-                                    src="/mini-icon/icon-04.png"
-                                    alt="Logo Baeumer"
-                                    width={30}
-                                    height={30}
-                                />
+                    {/* Weitere Slides */}
+                    <div className="px-7">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-inter font-normal text-2xl leading-6">
+                                    Content<br />Management
+                                </h3>
+                                <div className="w-8 h-8 flex items-center justify-center">
+                                    <Image
+                                        src="/mini-icon/icon-04.png"
+                                        alt="Logo Baeumer"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="font-inter font-semibold text-lg leading-5 group-hover:text-white">
-                                Content Management
-                            </h3>
-                            <hr />
-                            <p className="font-inter text-sm text-dunkel group-hover:text-white">
+
+                            <p className="font-inter text-sm text-dunkel">
                                 Von der Planung bis zur Optimierung setzen wir Maßstäbe für Sie und sorgen für perfekten Content.
                             </p>
+
                             <div className="flex">
                                 <ul className="flex flex-wrap">
-                                    {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-2 py-0.5 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-xs">
+                                    {['CMS', 'Content', 'Publishing', 'WordPress', 'Typo3', 'hubspot'].map((item, index) => (
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
                                             {item}
                                         </li>
                                     ))}
@@ -173,28 +205,31 @@ export default function IconBoxSlider() {
                         </a>
                     </div>
 
-                    {/* Slide 5 */}
-                    <div className="px-4">
-                        <a href="/leistungen/webdesign-uxdesign" className="m-2 group block w-full rounded-lg p-6 bg-white ring-1 ring-dunkel/5 space-y-3 hover:bg-darkblue hover:ring-blue">
-                            <div className="items-center mb-3">
-                                <Image
-                                    src="/mini-icon/icon-02.png"
-                                    alt="Logo Baeumer"
-                                    width={30}
-                                    height={30}
-                                />
+                    {/* Weitere Slides */}
+                    <div className="px-7">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-inter font-normal text-2xl leading-6">
+                                    KI-Chatbots<br />Automation
+                                </h3>
+                                <div className="w-8 h-8 flex items-center justify-center">
+                                    <Image
+                                        src="/mini-icon/icon-02.png"
+                                        alt="Logo Baeumer"
+                                        width={30}
+                                        height={30}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="font-inter font-semibold text-lg leading-5 group-hover:text-white">
-                                KI-Chatbots
-                            </h3>
-                            <hr />
-                            <p className="font-inter text-sm text-dunkel group-hover:text-white">
+
+                            <p className="font-inter text-sm text-dunkel">
                                 Kommunikation neu gedacht mit individuell trainierten KI-Chatbots für Ihre Marke.
                             </p>
+
                             <div className="flex">
                                 <ul className="flex flex-wrap">
-                                    {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-2 py-0.5 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-xs">
+                                    {['Chatbot', 'KI', 'Automation', 'Natural Language', 'Support', 'AI'].map((item, index) => (
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
                                             {item}
                                         </li>
                                     ))}
