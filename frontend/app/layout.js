@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Bricolage_Grotesque } from 'next/font/google';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Breadcrumbs from './components/Breadcrumbs'; // Breadcrumbs importieren
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -31,10 +32,10 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <main className="max-w-screen-2xl mx-auto">
+          <Breadcrumbs /> {/* Breadcrumbs-Komponente hier hinzufügen */}
           {children}
         </main>
         <Footer />
-
       </body>
     </html>
   );

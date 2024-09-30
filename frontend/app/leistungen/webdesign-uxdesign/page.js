@@ -2,15 +2,35 @@ import Image from "next/image";
 import Link from "next/link";
 import SimpleSlider from "@/app/components/Logoslider";
 import CTABox from "@/app/components/CTABox";
+import { ChevronRightIcon, BoltIcon, MagnifyingGlassIcon, DevicePhoneMobileIcon } from '@heroicons/react/20/solid'
 
 export default function Page() {
+
+  // Definiere das `features` Array mit den Icons und den Beschreibungen
+  const features = [
+    {
+      name: 'Performance und Ladegeschwindigkeit',
+      description: 'Schnelle Ladezeiten und optimale Performance, um Nutzern ein reibungsloses Erlebnis zu bieten.',
+      icon: BoltIcon,
+    },
+    {
+      name: 'Inhalt und Suchmaschinenoptimierung (SEO)',
+      description: 'Aussagekräftige Inhalte und SEO-Optimierung, um sicherzustellen, dass deine Webseite sowohl ansprechend als auch sichtbar in Suchmaschinen ist.',
+      icon: MagnifyingGlassIcon,
+    },
+    {
+      name: 'Design und Benutzererfahrung',
+      description: 'Attraktives, responsives Layout, das auf Conversion optimiert ist und Nutzern eine intuitive Benutzererfahrung bietet.',
+      icon: DevicePhoneMobileIcon,
+    },
+  ];
+
+
   return (
     <div>
       {/* Hero mit Bild */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-32">
-
+      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
         <div className="w-full md:w-1/2 flex justify-center h-auto lg:h-full items-center order-1 md:order-2 px-8 mt-5">
-          {/* Hier das animierte SVG mit begrenzter Größe */}
           <div className="w-full h-auto max-w-[544px]">
             <Image
               src="/titel-webdsign.svg"
@@ -19,10 +39,8 @@ export default function Page() {
               height={544}
               className="cursor-pointer transition-transform duration-300"
             />
-
           </div>
         </div>
-
         <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
           <h1 className="font-bricolage font-medium text-[2.5rem] text-dunkel md:text-[3.5rem] xl:text-[4.5rem] leading-[1.1] md:leading-[0.9]">
             Webdesign<br />
@@ -42,63 +60,87 @@ export default function Page() {
       </div>
 
 
-      <div className=" bg-lightblue">
 
-        <div className="flex justify-center">
-          <div className="flex flex-col w-1/2 items-center -mt-40">
+
+
+      <div className="bg-lightblue p-6 lg:p-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+          {/* Erste Reihe, erste Spalte (Bild) */}
+          <div className="flex justify-center items-center w-full h-auto px-12">
             <Image
               src="/ux-design.svg"
               alt="Ux-Design"
+              layout="responsive"
               width={631}
               height={449}
-              className="cursor-pointer transition-transform duration-300"
+              className="w-full h-auto"
             />
           </div>
-          <div className="flex flex-col justify-end w-1/2 font-bricolage font-light text-3xl lg:text-5xl mb-4 text-dunkel">
-            <h2>UX Design als<br />Schlüssel zum Erfolg</h2>
-          </div>
-        </div>
-        <div className="flex justify-center mt-5">
-          <div className="flex flex-col w-1/2 items-center pl-16 pr-2 mb-10">
-            <p>Erfolgreiches UX Design stellt den Nutzer in den Mittelpunkt. Durch eine durchdachte Benutzerführung, klare Strukturen und intuitive Interaktionen schaffen wir digitale Erlebnisse, die nicht nur begeistern, sondern auch Vertrauen aufbauen.</p>
-          </div>
-          <div className="flex flex-col w-1/2 items-center pr-16 mb-10">
-            <p>Unser Ansatz kombiniert Kreativität mit Strategie. Mit Techniken wie User Research und Prototyping gestalten wir Lösungen, die genau dort ansetzen, wo sie gebraucht werden und Ihr Wachstum nachhaltig fördert.</p>
+
+          {/* Erste Reihe, zweite Spalte (Überschrift) */}
+          <div className="flex flex-col justify-start text-left mx-3 lg:mx-8">
+            <h2 className="font-bricolage text-3xl font-normal text-dunkel sm:text-4xl my-3">
+              UX Design als <br /> Schlüssel zum Erfolg
+            </h2>
+            <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
+              Erfolgreiches UX Design stellt den Nutzer in den Mittelpunkt. Durch eine durchdachte Benutzerführung, klare Strukturen und intuitive Interaktionen schaffen wir digitale Erlebnisse, die nicht nur begeistern, sondern auch Vertrauen aufbauen.
+            </p>
+            <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
+              Unser Ansatz kombiniert Kreativität mit Strategie. Mit Techniken wie User Research und Prototyping gestalten wir Lösungen, die genau dort ansetzen, wo sie gebraucht werden und Ihr Wachstum nachhaltig fördert.
+            </p>
           </div>
         </div>
       </div>
+
+
+
+
 
 
       {/* Text mit Bild */}
-      <div className="flex justify-center w-5/6 gap-8 mx-auto mb-32 mt-44">
-        <div className="flex flex-col w-1/2">
-          <h2 className="font-bricolage font-light text-3xl lg:text-5xl mb-4 text-dunkel">
-            Webdesign, das Ideen in Erfolge verwandelt
-          </h2>
-          <p>Ihr Webdesign sollte mehr leisten als gut auszusehen. Es sollte Besucher in Kunden verwandeln, Ihre Marke stärken und messbare Ergebnisse liefern. Wir gestalten digitale Erlebnisse, die Ihr Wachstum fördern.</p>
-          <ul className="list-disc list-inside text-lg pl-6 space-y-2 text-dunkel mt-4">
-            <li className="marker:text-blue">Schnelle Ladezeiten</li>
-            <li className="marker:text-blue">Aussagekräftige Inhalte</li>
-            <li className="marker:text-blue">SEO-optimiert</li>
-            <li className="marker:text-blue">Conversion-optimiert</li>
-            <li className="marker:text-blue">Attraktives Layout</li>
-            <li className="marker:text-blue">Responsives Design</li>
-          </ul>
+      <div className="overflow-hidden bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+            {/* Text-Spalte */}
+            <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
+              <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                <h2 className="text-inter font-semibold leading-7 text-blue">PERFORMANCE</h2>
+                <p className="font-bricolage mt-2 text-3xl font-normal tracking-tight text-dunkel sm:text-4xl">
+                  Webdesign, das Ideen in Erfolge verwandelt
+                </p>
+                <p className="font-inter font-light mt-6 text-lg leading-8 text-dunkel">
+                  Ihr Webdesign sollte mehr leisten als gut auszusehen. Es sollte Besucher in Kunden verwandeln, Ihre Marke stärken und messbare Ergebnisse liefern. Wir gestalten digitale Erlebnisse, die Ihr Wachstum fördern.
+                </p>
+                <dl className="mt-10 max-w-xl space-y-8 font-inter font-light leading-7 text-dunkel lg:max-w-none">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="relative pl-9">
+                      <dt className="inline font-semibold text-dunkel">
+                        <feature.icon aria-hidden="true" className="absolute left-1 top-1 h-5 w-5 text-blue" />
+                        {feature.name}
+                      </dt>{' '}
+                      <dd className="inline">{feature.description}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+
+            {/* Bild-Spalte */}
+            <div className="p-6">
+              <Image
+                src="/ux.png"
+                alt="Prototype"
+                width={700}
+                height={425}
+                className="w-full h-auto object-cover cursor-pointer transition-transform duration-300"
+              />
 
 
-
-
-        </div>
-        <div className="flex flex-col w-1/2">
-          <Image
-            src="/ux.png"
-            alt="Prototype"
-            width={700}
-            height={425}
-            className="cursor-pointer transition-transform duration-300"
-          />
+            </div>
+          </div>
         </div>
       </div>
+
 
 
 
@@ -120,9 +162,6 @@ export default function Page() {
           buttonTextColor="#ffffff"
         />
       </div>
-
-
     </div>
-
   );
 }

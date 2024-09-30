@@ -6,7 +6,7 @@ export default function CTABox({ title, text, buttonText, bgColor, buttonColor, 
   return (
     <div className={`flex flex-col justify-center items-center py-12 px-12 sm:px-12 md:px-12 lg:px-60 xl:px-80 2xl:px-80 text-center ${bgColor}`}>
       {/* Titel */}
-      <h2 className="font-bricolage font-light text-3xl lg:text-5xl mb-4 text-dunkel">
+      <h2 className="font-bricolage font-normal text-3xl lg:text-5xl mb-4 text-dunkel">
         {title}
       </h2>
 

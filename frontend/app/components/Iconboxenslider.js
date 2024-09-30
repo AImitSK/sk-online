@@ -75,7 +75,7 @@ export default function IconBoxSlider() {
 
                     {/* Slide 1 */}
                     <div className="px-7">
-                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-lightblue space-y-3 hover:bg-grey">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-inter font-normal text-2xl leading-6">
                                     Webdesign<br />UX-Design
@@ -90,14 +90,14 @@ export default function IconBoxSlider() {
                                 </div>
                             </div>
 
-                            <p className="font-inter text-sm text-dunkel">
+                            <p className="font-inter font-light text-sm text-dunkel">
                                 Modernes Webdesign und intuitive UX für unvergessliche Nutzererlebnisse perfekt umgesetzt.
                             </p>
 
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['UX', 'UI', 'Webdesign', 'WordPress', 'Typo3', 'React'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm font-inter font-light">
                                             {item}
                                         </li>
                                     ))}
@@ -108,7 +108,7 @@ export default function IconBoxSlider() {
 
                     {/* Weitere Slides */}
                     <div className="px-7">
-                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                        <a href="/leistungen/digital-marketing" className="block w-full rounded-lg p-6 bg-lightblue space-y-3 hover:bg-grey">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-inter font-normal text-2xl leading-6">
                                     Digital<br />Marketing
@@ -123,14 +123,14 @@ export default function IconBoxSlider() {
                                 </div>
                             </div>
 
-                            <p className="font-inter text-sm text-dunkel">
+                            <p className="font-inter font-light text-sm text-dunkel">
                                 Wir entwickeln Strategien, die Ihre Marke in den Mittelpunkt rücken und sichtbare Ergebnisse erzielen.
                             </p>
 
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['SEO', 'Content', 'Social Media', 'PPC', 'Analytics', 'Marketing'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm font-inter font-light">
                                             {item}
                                         </li>
                                     ))}
@@ -141,7 +141,7 @@ export default function IconBoxSlider() {
 
                     {/* Weitere Slides */}
                     <div className="px-7">
-                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                        <a href="/leistungen/werbefotografie-film" className="block w-full rounded-lg p-6 bg-lightblue space-y-3 hover:bg-grey">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-inter font-normal text-2xl leading-6">
                                     Werbefotografie<br />Werbefilm
@@ -156,14 +156,14 @@ export default function IconBoxSlider() {
                                 </div>
                             </div>
 
-                            <p className="font-inter text-sm text-dunkel">
+                            <p className="font-inter font-light text-sm text-dunkel">
                                 Wir verleihen Ihrer Werbung Flügel mit Fotos und Filmaufnahmen, die begeistern.
                             </p>
 
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['Fotografie', 'Werbefilm', 'Bildbearbeitung', 'Produktfotografie', 'Shooting'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm font-inter font-light">
                                             {item}
                                         </li>
                                     ))}
@@ -174,7 +174,7 @@ export default function IconBoxSlider() {
 
                     {/* Weitere Slides */}
                     <div className="px-7">
-                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                        <a href="/leistungen/content-management" className="block w-full rounded-lg p-6 bg-lightblue space-y-3 hover:bg-grey">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-inter font-normal text-2xl leading-6">
                                     Content<br />Management
@@ -189,14 +189,14 @@ export default function IconBoxSlider() {
                                 </div>
                             </div>
 
-                            <p className="font-inter text-sm text-dunkel">
+                            <p className="font-inter font-light  text-sm text-dunkel">
                                 Von der Planung bis zur Optimierung setzen wir Maßstäbe für Sie und sorgen für perfekten Content.
                             </p>
 
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['CMS', 'Content', 'Publishing', 'WordPress', 'Typo3', 'hubspot'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm font-inter font-light">
                                             {item}
                                         </li>
                                     ))}
@@ -207,7 +207,7 @@ export default function IconBoxSlider() {
 
                     {/* Weitere Slides */}
                     <div className="px-7">
-                        <a href="/leistungen/webdesign-uxdesign" className="block w-full rounded-lg p-6 bg-grey space-y-3 hover:bg-lightblue">
+                        <a href="/leistungen/ki-chatbots" className="block w-full rounded-lg p-6 bg-lightblue space-y-3 hover:bg-grey">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-inter font-normal text-2xl leading-6">
                                     KI-Chatbots<br />Automation
@@ -222,14 +222,14 @@ export default function IconBoxSlider() {
                                 </div>
                             </div>
 
-                            <p className="font-inter text-sm text-dunkel">
+                            <p className="font-inter font-light text-sm text-dunkel">
                                 Kommunikation neu gedacht mit individuell trainierten KI-Chatbots für Ihre Marke.
                             </p>
 
                             <div className="flex">
                                 <ul className="flex flex-wrap">
                                     {['Chatbot', 'KI', 'Automation', 'Natural Language', 'Support', 'AI'].map((item, index) => (
-                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm">
+                                        <li key={index} className="mr-1 mb-1 px-3 py-1 bg-sky-50 rounded-full border border-sky-100 text-darkblue text-sm font-inter font-light">
                                             {item}
                                         </li>
                                     ))}

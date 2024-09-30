@@ -1,4 +1,5 @@
 "use client";
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import SimpleSlider from './components/Logoslider';
 import IconBoxSlider from './components/Iconboxenslider';
 import ImageTextBox from './components/ImageTextBox';
@@ -10,12 +11,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-
-
-
-
 {/* Hero mit Bild */}
-<div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6">
+<div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-6 mt-6">
 
   <div className="w-full md:w-1/2 flex justify-center h-auto lg:h-full items-center order-1 md:order-2 px-8 mt-5">
     {/* Hier das animierte SVG mit begrenzter Größe */}
@@ -24,20 +21,45 @@ export default function Home() {
     </div>
   </div>
   
-  <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
+  <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1 md:pr-6">
+
+
+{/* Was ist neu */}
+  <div className="mt-24 sm:mt-32 lg:mt-16">
+            <a href="/kitools" className="inline-flex space-x-6">
+              <span className="font-inter rounded-full bg-lightblue px-3 py-1 text-sm font-semibold leading-6 text-blue ring-1 ring-inset ring-blue">
+                What's new
+              </span>
+              <span className="font-inter inline-flex items-center space-x-2 text-sm font-medium leading-6 text-dunkel">
+                <span>Social Media AI-Generator v.1.0</span>
+                <ChevronRightIcon aria-hidden="true" className="h-5 w-5 text-dunkel" />
+              </span>
+            </a>
+          </div>
+
+
+
     <h1 className="font-bricolage font-medium text-[2.5rem] text-dunkel md:text-[3.5rem] xl:text-[4.5rem] leading-[1.1] md:leading-[0.9]">
       Zeitgerechtes Webdesign und Digital Marketing
     </h1>
     <p className="font-inter font-light text-dunkel text-base md:text-2xl leading-relaxed">
-      Inszeniert von SK Online Marketing
+      SK Online Marketing ist eine Werbeagentur aus Bad Oeynhausen mit dem Schwerpunkt auf digitalen Medien.
     </p>
+
+      {/* Button */}
     <div className="flex justify-center md:justify-start">
-      <Link href="/agentur" legacyBehavior>
-        <a className="inline-block px-6 md:px-8 py-2 bg-dunkel text-white rounded-md hover:bg-white hover:text-dunkel border border-dunkel transition-all max-w-max">
-          mehr hierzu
-        </a>
-      </Link>
-    </div>
+  <Link href="/agentur" legacyBehavior>
+    <a className="inline-flex items-center px-6 py-2 md:px-8 bg-dunkel text-white rounded-md hover:bg-white hover:text-dunkel border border-dunkel transition-all max-w-max group">
+      <span className="mr-2">mehr hierzu</span>
+      <ChevronRightIcon
+        aria-hidden="true"
+        className="h-5 w-5 ml-2 text-white transition-all group-hover:text-[#44474C]"
+      />
+    </a>
+  </Link>
+</div>
+
+
   </div>
 </div>
 
