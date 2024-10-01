@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <div>
       {/* Hero section with image and text */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
+      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[644px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
         {/* Image on the right for desktop, left for mobile */}
         <div className="w-full md:w-1/2 flex justify-center h-auto lg:h-full items-center order-1 md:order-2 px-8 mt-5">
           <div className="w-full h-auto max-w-[544px]">
@@ -65,7 +65,7 @@ export default function Page() {
       <div className="bg-lightblue p-6 lg:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
           {/* UX design image */}
-          <div className="flex justify-center items-center w-full h-auto px-12">
+          <div className="flex justify-center items-center w-full h-auto px-12 xl:px-24 mt-6">
             <Image
               src="/ux-design.svg"
               alt="Ux-Design"
@@ -81,10 +81,10 @@ export default function Page() {
             <h2 className="font-bricolage text-3xl font-normal text-dunkel sm:text-4xl my-3">
               UX Design als <br /> Schlüssel zum Erfolg
             </h2>
-            <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
+            <p className="font-inter font-light text-md leading-8 text-dunkel my-3">
               Erfolgreiches UX Design stellt den Nutzer in den Mittelpunkt. Durch eine durchdachte Benutzerführung, klare Strukturen und intuitive Interaktionen schaffen wir digitale Erlebnisse, die nicht nur begeistern, sondern auch Vertrauen aufbauen.
             </p>
-            <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
+            <p className="font-inter font-light text-md leading-8 text-dunkel my-3">
               Unser Ansatz kombiniert Kreativität mit Strategie. Mit Techniken wie User Research und Prototyping gestalten wir Lösungen, die genau dort ansetzen, wo sie gebraucht werden und Ihr Wachstum nachhaltig fördert.
             </p>
           </div>
