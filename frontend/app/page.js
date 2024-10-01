@@ -24,7 +24,7 @@ export default function Home() {
 
 
           {/* Was ist neu */}
-          <div className="mt-24 sm:mt-32 lg:mt-16">
+          <div className="mt-12">
             <a href="/kitools" className="inline-flex space-x-6">
               <span className="font-inter rounded-full bg-lightblue px-3 py-1 text-sm font-semibold leading-6 text-blue ring-1 ring-inset ring-blue">
                 What's new

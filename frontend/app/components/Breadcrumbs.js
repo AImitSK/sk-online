@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
 
   // Keine Breadcrumbs auf der Root-Seite anzeigen
   if (pathname === '/') {
-    return <div style={{ height: '50px' }}></div>; // Platzhalter mit fixer Höhe
+    return <div></div>; 
   }
   
 
