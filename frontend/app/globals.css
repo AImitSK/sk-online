@@ -62,21 +62,3 @@ body {
 }
 
 
-/* Hide the scrollbar by default */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
-}
-
-.scrollbar-hide {
-  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
-  scrollbar-width: none;    /* Hide scrollbar for Firefox */
-}
-
-/* Show the scrollbar on hover */
-.hover\:scrollbar-visible:hover::-webkit-scrollbar {
-  display: block; /* Make scrollbar visible on hover for WebKit-based browsers */
-}
-
-.hover\:scrollbar-visible:hover {
-  scrollbar-width: thin; /* Show a thin scrollbar on hover for Firefox */
-}

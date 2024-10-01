@@ -27,7 +27,27 @@ export default function Page() {
   ];
 
   return (
+
     <div>
+      <svg
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+      >
+        <defs>
+          <pattern
+            x="50%"
+            y={-1}
+            id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+            width={200}
+            height={200}
+            patternUnits="userSpaceOnUse"
+          >
+            <path d="M.5 200V.5H200" fill="none" />
+          </pattern>
+        </defs>
+        <rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" width="100%" height="100%" strokeWidth={0} />
+      </svg>
+
       {/* Hero section with image and text */}
       <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[644px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
         {/* Image on the right for desktop, left for mobile */}
@@ -43,13 +63,13 @@ export default function Page() {
           </div>
         </div>
         {/* Text content on the left for desktop, right for mobile */}
-        <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1">
-          <h1 className="font-bricolage font-medium text-[2.5rem] text-dunkel md:text-[3.5rem] xl:text-[4.5rem] leading-[1.1] md:leading-[0.9]">
+        <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1 xl:pr-24 2xl:pr-28">
+          <h1 className="font-bricolage font-medium text-[4.5rem] text-dunkel md:text-[5.5rem] xl:text-[6.5rem] leading-[0.85]">
             Webdesign<br />
-            UX-Design
+            <span className="text-blue">UX</span>-Design
           </h1>
           <p className="font-inter font-light text-dunkel text-base md:text-2xl leading-relaxed">
-            Jede Interaktion ein Erlebnis. Wir entwickeln Webseiten, die intuitiv begeistern und den Nutzer mühelos ans Ziel führen.
+            Wir entwickeln Webseiten, die intuitiv begeistern und den Nutzer mühelos ans Ziel führen - jede Interaktion ein Erlebnis.
           </p>
           <div className="flex justify-center md:justify-start">
             <Link href="/referenzen" legacyBehavior>
@@ -95,15 +115,35 @@ export default function Page() {
       <div className="mt-12">
         <WebdsignListe />
       </div>
+      {/* Performance and features section with SVG background */}
+      <div className="relative overflow-hidden bg-white py-24 sm:py-32">
+        {/* SVG Background */}
+        <svg
+          aria-hidden="true"
+          className="absolute inset-0 z-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        >
+          <defs>
+            <pattern
+              id="grid-pattern"
+              x="50%"
+              y={-1}
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect fill="url(#grid-pattern)" width="100%" height="100%" strokeWidth={0} />
+        </svg>
 
-      {/* Performance and features section */}
-      <div className="overflow-hidden bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        {/* Content */}
+        <div className="relative mx-auto max-w-7xl md:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
             {/* Performance text */}
             <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                <h2 className="text-inter font-semibold leading-7 text-blue">PERFORMANCE</h2>
+                <h2 className="text-inter font-semibold leading-7 tracking-wider text-blue">PERFORMANCE</h2>
                 <p className="font-bricolage mt-2 text-3xl font-normal tracking-tight text-dunkel sm:text-4xl">
                   Webdesign, das Ideen in Erfolge verwandelt
                 </p>
@@ -137,6 +177,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+
 
       {/* Logo Slider section */}
       <div className="w-full -mt-6 -mb-8 flex justify-center items-center">

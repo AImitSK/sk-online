@@ -1,4 +1,5 @@
 "use client";
+import { motion } from 'framer-motion';
 import {
   BuildingOfficeIcon,
   NewspaperIcon,
@@ -8,7 +9,6 @@ import {
   CursorArrowRaysIcon,
   FolderIcon,
 } from '@heroicons/react/20/solid';
-import { useRef, useState } from 'react';
 
 // Content Array
 const siteTypes = [
@@ -56,60 +56,27 @@ const siteTypes = [
   },
 ];
 
-// A scrollable list of different website types with drag-to-scroll functionality
-export default function WebdsignListe() {
-  const scrollContainerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  // Start dragging
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
-
-  // Handle dragging
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  // Stop dragging
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
+export default function WebdesignListe() {
   return (
-    <div className="relative h-80">
-      <div
-        className="overflow-x-auto py-4 scrollbar-hide hover:scrollbar-visible"
-        ref={scrollContainerRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseUp}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-      >
-        <ul role="list" className="flex space-x-6 px-4">
-          {siteTypes.map((siteType) => (
-            <li key={siteType.id} className="flex-none w-80 overflow-hidden rounded-xl border border-grey">
-              <div className="flex items-center gap-x-4 border-b border-grey bg-grey p-6">
-                <div className="flex-none rounded-lg bg-gradient-to-br from-blue to-darkblue p-2">
-                  <siteType.icon aria-hidden="true" className="h-8 w-8 text-white" />
-                </div>
-                <div className="text-lg font-bricolage leading-6 text-dunkel">{siteType.name}</div>
+    <div className="relative p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {siteTypes.map((siteType) => (
+          <div
+            key={siteType.id}
+            className="relative min-w-[350px] sm:min-w-0 rounded-xl border border-grey bg-white mb-6 transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+            style={{ overflow: 'hidden' }}
+          >
+            <div className="flex items-center gap-x-4 border-b border-grey bg-grey p-6">
+              <div className="flex-none rounded-lg bg-gradient-to-br from-blue to-darkblue p-2">
+                <siteType.icon aria-hidden="true" className="h-8 w-8 text-white" />
               </div>
-              <div className="px-6 py-4 text-sm font-inter font-light leading-6 text-dunkel">
-                {siteType.text}
-              </div>
-            </li>
-          ))}
-        </ul>
+              <div className="text-lg font-bricolage leading-6 text-dunkel">{siteType.name}</div>
+            </div>
+            <div className="px-6 py-4 text-sm font-inter font-light leading-6 text-dunkel">
+              {siteType.text}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
