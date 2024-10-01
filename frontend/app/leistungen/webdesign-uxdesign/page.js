@@ -64,7 +64,7 @@ export default function Page() {
         </div>
         {/* Text content on the left for desktop, right for mobile */}
         <div className="flex flex-col justify-center w-full md:w-1/2 space-y-6 text-center md:text-left order-2 md:order-1 xl:pr-24 2xl:pr-28">
-          <h1 className="font-bricolage font-medium text-[4.5rem] text-dunkel md:text-[5.5rem] xl:text-[6.5rem] leading-[0.85]">
+          <h1 className="font-bricolage font-medium text-[4.0rem] text-dunkel md:text-[5.5rem] xl:text-[6.5rem] leading-[0.85]">
             Webdesign<br />
             <span className="text-blue">UX</span>-Design
           </h1>
