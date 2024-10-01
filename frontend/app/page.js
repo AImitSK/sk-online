@@ -31,7 +31,7 @@ export default function Home() {
                 What's new
               </span>
               <span className="font-inter inline-flex items-center space-x-2 text-sm font-medium leading-6 text-dunkel">
-                <span>Social Media AI-Generator v.1.0</span>
+                <span>Social Media Generator</span>
                 <ChevronRightIcon aria-hidden="true" className="h-5 w-5 text-dunkel" />
               </span>
             </a>
