@@ -11,7 +11,7 @@ export default function IconBoxSlider() {
     const NextArrow = ({ onClick }) => {
         return (
             <div
-                className="absolute top-1/2 2xl:-right-5 xl:right-0 -right-10 transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300"
+                className="absolute top-1/2 2xl:-right-5 xl:right-0 -right-10 transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300 hidden md:flex" // Navigationspfeil auf Mobilgeräten ausgeblendet
                 onClick={onClick}
             >
                 ›
@@ -22,13 +22,14 @@ export default function IconBoxSlider() {
     const PrevArrow = ({ onClick }) => {
         return (
             <div
-                className="absolute top-1/2 2xl:-left-5 xl:left-0  -left-10 transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300"
+                className="absolute top-1/2 2xl:-left-5 xl:left-0 -left-10 transform -translate-y-1/2 bg-darkblue text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer z-10 opacity-50 hover:opacity-100 transition-opacity duration-300 hidden md:flex" // Navigationspfeil auf Mobilgeräten ausgeblendet
                 onClick={onClick}
             >
                 ‹
             </div>
         );
     };
+    
     
 
     var settings = {
