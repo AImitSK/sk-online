@@ -1,11 +1,15 @@
-'use client';  
+'use client';
 import { usePathname } from 'next/navigation';
 import { ChevronRightIcon, HomeIcon } from '@heroicons/react/20/solid';
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
 
- 
+  // Keine Breadcrumbs auf der Root-Seite anzeigen
+  if (pathname === '/') {
+    return null;
+  }
+
   const pathArray = pathname.split('/').filter((path) => path);
 
   // Seitenobjekte für Breadcrumbs erstellen

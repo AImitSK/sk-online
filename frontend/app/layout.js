@@ -32,7 +32,8 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <main className="max-w-screen-2xl mx-auto">
-          <Breadcrumbs /> {/* Breadcrumbs-Komponente hier hinzufügen */}
+          
+          <Breadcrumbs />
           {children}
         </main>
         <Footer />
