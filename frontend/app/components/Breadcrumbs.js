@@ -7,8 +7,9 @@ export default function Breadcrumbs() {
 
   // Keine Breadcrumbs auf der Root-Seite anzeigen
   if (pathname === '/') {
-    return null;
+    return <div style={{ height: '50px' }}></div>; // Platzhalter mit fixer Höhe
   }
+  
 
   const pathArray = pathname.split('/').filter((path) => path);
 
