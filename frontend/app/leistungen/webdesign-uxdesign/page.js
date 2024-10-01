@@ -7,21 +7,21 @@ import { BoltIcon, MagnifyingGlassIcon, DevicePhoneMobileIcon } from '@heroicons
 
 export default function Page() {
 
-  // Features list for the performance section with icons and descriptions
+  // Defining the `features` array with icons and descriptions for performance section
   const features = [
     {
-      name: 'Performance and Load Speed',
-      description: 'Fast load times and optimal performance for a smooth user experience.',
+      name: 'Performance und Ladegeschwindigkeit',
+      description: 'Schnelle Ladezeiten und optimale Performance, um Nutzern ein reibungsloses Erlebnis zu bieten.',
       icon: BoltIcon,
     },
     {
-      name: 'Content and Search Engine Optimization (SEO)',
-      description: 'Meaningful content and SEO optimization to ensure your website is both engaging and visible in search engines.',
+      name: 'Inhalt und Suchmaschinenoptimierung (SEO)',
+      description: 'Aussagekräftige Inhalte und SEO-Optimierung, um sicherzustellen, dass deine Webseite sowohl ansprechend als auch sichtbar in Suchmaschinen ist.',
       icon: MagnifyingGlassIcon,
     },
     {
-      name: 'Design and User Experience',
-      description: 'Attractive, responsive design optimized for conversion and providing intuitive user experience.',
+      name: 'Design und Benutzererfahrung',
+      description: 'Attraktives, responsives Layout, das auf Conversion optimiert ist und Nutzern eine intuitive Benutzererfahrung bietet.',
       icon: DevicePhoneMobileIcon,
     },
   ];
@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <div>
       {/* Hero section with image and text */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[640px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
+      <div className="flex flex-col md:flex-row justify-between items-center h-auto lg:h-[800px] max-w-screen-2xl mx-auto px-8 space-y-8 mt-6 mb-28">
         {/* Image on the right for desktop, left for mobile */}
         <div className="w-full md:w-1/2 flex justify-center h-auto lg:h-full items-center order-1 md:order-2 px-8 mt-5">
           <div className="w-full h-auto max-w-[544px]">
@@ -49,12 +49,12 @@ export default function Page() {
             UX-Design
           </h1>
           <p className="font-inter font-light text-dunkel text-base md:text-2xl leading-relaxed">
-            Every interaction an experience. We develop websites that intuitively captivate and effortlessly guide users to their destination.
+            Jede Interaktion ein Erlebnis. Wir entwickeln Webseiten, die intuitiv begeistern und den Nutzer mühelos ans Ziel führen.
           </p>
           <div className="flex justify-center md:justify-start">
             <Link href="/referenzen" legacyBehavior>
               <a className="inline-block px-6 md:px-8 py-2 bg-dunkel text-white rounded-md hover:bg-white hover:text-dunkel border border-dunkel transition-all max-w-max">
-                References
+                Referenzen
               </a>
             </Link>
           </div>
@@ -79,13 +79,13 @@ export default function Page() {
           {/* UX Design description */}
           <div className="flex flex-col justify-start text-left mx-3 lg:mx-8">
             <h2 className="font-bricolage text-3xl font-normal text-dunkel sm:text-4xl my-3">
-              UX Design as <br /> Key to Success
+              UX Design als <br /> Schlüssel zum Erfolg
             </h2>
             <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
-              Successful UX design puts the user at the center. With thoughtful navigation, clear structures, and intuitive interactions, we create digital experiences that not only inspire but also build trust.
+              Erfolgreiches UX Design stellt den Nutzer in den Mittelpunkt. Durch eine durchdachte Benutzerführung, klare Strukturen und intuitive Interaktionen schaffen wir digitale Erlebnisse, die nicht nur begeistern, sondern auch Vertrauen aufbauen.
             </p>
             <p className="font-inter font-light text-lg leading-8 text-dunkel my-3">
-              Our approach combines creativity with strategy. Through user research and prototyping, we design solutions that address your needs and foster sustainable growth.
+              Unser Ansatz kombiniert Kreativität mit Strategie. Mit Techniken wie User Research und Prototyping gestalten wir Lösungen, die genau dort ansetzen, wo sie gebraucht werden und Ihr Wachstum nachhaltig fördert.
             </p>
           </div>
         </div>
@@ -105,10 +105,10 @@ export default function Page() {
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                 <h2 className="text-inter font-semibold leading-7 text-blue">PERFORMANCE</h2>
                 <p className="font-bricolage mt-2 text-3xl font-normal tracking-tight text-dunkel sm:text-4xl">
-                  Web design that turns ideas into success
+                  Webdesign, das Ideen in Erfolge verwandelt
                 </p>
                 <p className="font-inter font-light mt-6 text-lg leading-8 text-dunkel">
-                  Your web design should do more than look good. It should turn visitors into customers, strengthen your brand, and deliver measurable results.
+                  Ihr Webdesign sollte mehr leisten als gut auszusehen. Es sollte Besucher in Kunden verwandeln, Ihre Marke stärken und messbare Ergebnisse liefern. Wir gestalten digitale Erlebnisse, die Ihr Wachstum fördern.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 font-inter font-light leading-7 text-dunkel lg:max-w-none">
                   {features.map((feature) => (
@@ -148,9 +148,9 @@ export default function Page() {
       {/* Call to Action Box */}
       <div>
         <CTABox
-          title="We transform data into tangible digital success."
-          text="Sounds like digital alchemy? We'll show you how we transform data, insights, or creative UX design into true digital gold."
-          buttonText="Get in touch"
+          title="Wir transformieren Daten in greifbaren digitalen Erfolg."
+          text="Klingt wie digitale Alchemie? Wir zeigen Ihnen, wie wir aus Daten, Insights oder kreativem UX-Design wahre digitale Goldstücke „transmutieren“."
+          buttonText="Kontakt aufnehmen"
           bgColor="bg-lightblue"
           buttonColor="#005FAB"
           buttonTextColor="#ffffff"

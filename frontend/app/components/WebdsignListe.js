@@ -14,45 +14,45 @@ import { useRef, useState } from 'react';
 const siteTypes = [
   {
     id: 1,
-    name: 'Business Websites',
+    name: 'Unternehmensseiten',
     icon: BuildingOfficeIcon,
-    text: 'Professional websites that present information about a company, its services, and products.',
+    text: 'Professionelle Webseiten, die Informationen über ein Unternehmen, seine Dienstleistungen und Produkte präsentieren.',
   },
   {
     id: 2,
-    name: 'Magazine Websites',
+    name: 'Magazin-Webseiten',
     icon: NewspaperIcon,
-    text: 'Online platforms that showcase current articles, news, and editorial content in an appealing layout.',
+    text: 'Online-Plattformen, die aktuelle Artikel, Nachrichten und redaktionelle Inhalte in einem ansprechenden Layout präsentieren.',
   },
   {
     id: 3,
-    name: 'E-Commerce Websites',
+    name: 'E-Commerce-Webseiten',
     icon: ShoppingCartIcon,
-    text: 'Websites that enable the sale of products or services and offer a seamless online shopping experience.',
+    text: 'Webseiten, die den Verkauf von Produkten oder Dienstleistungen ermöglichen und eine nahtlose Online-Shopping-Erfahrung bieten.',
   },
   {
     id: 4,
     name: 'Blogs',
     icon: PencilSquareIcon,
-    text: 'Websites that regularly publish updates on specific topics, offering readers informative or entertaining content.',
+    text: 'Webseiten, die regelmäßig aktualisierte Beiträge zu bestimmten Themen veröffentlichen und Lesern informative oder unterhaltsame Inhalte bieten.',
   },
   {
     id: 5,
-    name: 'Portfolio Websites',
+    name: 'Portfolio-Websites',
     icon: BriefcaseIcon,
-    text: 'Websites for creatives, like designers or photographers, to showcase their work and attract potential clients.',
+    text: 'Webseiten, auf denen Kreative, wie Designer oder Fotografen, ihre Arbeiten und Projekte präsentieren und potenzielle Kunden ansprechen können.',
   },
   {
     id: 6,
-    name: 'Landing Pages',
+    name: 'Landingpages',
     icon: CursorArrowRaysIcon,
-    text: 'Single pages created specifically for marketing campaigns to drive visitors to perform a specific action, like filling out a form or making a purchase.',
+    text: 'Einzelseiten, die speziell für Marketingkampagnen erstellt werden, um Besucher zu einer bestimmten Aktion, wie dem Ausfüllen eines Formulars oder dem Kauf eines Produkts, zu verleiten.',
   },
   {
     id: 7,
-    name: 'Directories',
+    name: 'Verzeichnisse',
     icon: FolderIcon,
-    text: 'Websites that provide a collection of information or services in a specific category or industry, helping users search and navigate.',
+    text: 'Webseiten, die eine Sammlung von Informationen oder Dienstleistungen in einer bestimmten Kategorie oder Branche auflisten und Nutzern bei der Suche und Navigation helfen.',
   },
 ];
 
