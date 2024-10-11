@@ -11,7 +11,7 @@
 
 # next.js
 /frontend/.next/
-frontend/out/
+/frontend/out/
 
 # production
 /frontend/build
@@ -39,6 +39,7 @@ next-env.d.ts
 wordpress/*
 !wordpress/wp-content/
 !wordpress/wp-config.php
+!wordpress/Dockerfile
 
 # Database (ignore MySQL database files)
 database/*
