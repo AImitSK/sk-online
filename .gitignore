@@ -11,7 +11,7 @@
 
 # next.js
 /frontend/.next/
-/frontend/out/
+frontend/out/
 
 # production
 /frontend/build
@@ -34,3 +34,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# WordPress (ignore all files in the WordPress directory)
+wordpress/*
+!wordpress/wp-content/
+!wordpress/wp-config.php
+
+# Database (ignore MySQL database files)
+database/*
+
+# Ignore Docker-related files
+docker-compose.override.yml
